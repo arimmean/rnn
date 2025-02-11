@@ -52,6 +52,7 @@ class TextDataset(Dataset):
             self.sp_model.bos_id(), self.sp_model.eos_id()
         self.max_length = max_length
         self.vocab_size = self.sp_model.vocab_size()
+        self.pad_id = 0
 
     def text2ids(self, texts: Union[str, List[str]]) -> Union[List[int], List[List[int]]]:
         """
